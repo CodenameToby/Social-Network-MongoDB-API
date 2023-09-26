@@ -1,8 +1,15 @@
-class thoughtText {
-    // string
-    // required
-    // must be between 1 and 280 char
-}
+const mongoose = require('mongoose');
+
+const thoughtSchema = new mongoose.Schema(
+    {
+    thoughtText: {type: String, required: true, min: 1, max: 280}
+},
+    {
+    createdAt: {type: Date}
+    },
+    {timestamps: true}
+)
+
 
 class createdAt {
     // date
